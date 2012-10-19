@@ -93,8 +93,10 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Packets\Class1.cs" />
-    <Compile Include="Packets\InitUser.cs" />
+    <Compile Include="Packets\ClientPackets\InitUser.cs" />
+    <Compile Include="Packets\DataTypes\DisconnectionReason.cs" />
+    <Compile Include="Packets\DataTypes\ServerStatus.cs" />
+    <Compile Include="Packets\ServerPackets\DisconnectionNoticeSP.cs" />
     <Compile Include="Packets\ServerPackets\WelcomeSP.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -110,16 +112,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Protobuf\ClientProtocol.proto">
-      <Generator>Pt</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Protobuf\DataTypes.proto" />
-    <EmbeddedResource Include="Protobuf\ServerProtocol.proto" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Core\" />
-    <Folder Include="Packets\ClientPackets\" />
-    <Folder Include="Packets\DataTypes\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 using System.Net.Sockets ;
+using ProtoBuf;
+using OssercClient.Packets.ServerPackets;
 namespace Project01
 {
 	/// <summary>
@@ -272,6 +274,10 @@ namespace Project01
 				int charLen = d.GetChars(buffer, 0, iRx, chars, 0);
 				System.String szData = new System.String(chars);
 				txtDataRx.Text = szData;
+
+
+
+               // Serializer.Deserialize<WelcomeSP>();
 			}
 			catch(SocketException se)
 			{
